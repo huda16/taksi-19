@@ -12,14 +12,14 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
-            <a class="navbar-brand" href="#">TAKSI-19</a>
+            <a class="navbar-brand" href="#"><img src="img/logo 2.png" alt="TAKSI-19" class="gambar"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse  justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="#">Beranda <span class="sr-only">(current)</span></a>
-                    <a class="nav-link" href="logout.php">Logout</a>
+                    <a class="nav-link active mr-2" href="#">Beranda<span class="sr-only">(current)</span></a>
+                    <a class="nav-link btn btn-primary text-white" href="logout.php">Logout</a>
                 </div>
             </div>
         </nav>

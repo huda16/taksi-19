@@ -13,30 +13,6 @@ function query($query)
     return $rows;
 }
 
-
-
-function tambah($data)
-{
-    // ambildata dari tiap elemen dalam form
-    global $conn;
-
-    $jeniskendaraan = htmlspecialchars($data["jeniskendaraan"]);
-    $jammasuk = htmlspecialchars($data["jammasuk"]);
-    $jamkeluar = htmlspecialchars($data["jamkeluar"]);
-    $bayar = htmlspecialchars($data["bayar"]);
-
-    // query insert data
-    $query = "INSERT INTO parkir
-				VALUES
-			 ('', '$jeniskendaraan', '$jammasuk', '$jamkeluar', '$bayar')
- 			";
-    mysqli_query($conn, $query);
-
-
-    return mysqli_affected_rows($conn);
-}
-
-
 function keluar($data)
 {
     global $conn;
@@ -49,24 +25,6 @@ function keluar($data)
     $query = "UPDATE parkir SET
  				jamkeluar = '$jamkeluar',
  				bayar = '$bayar'
- 			  WHERE id = $id
- 			";
-    mysqli_query($conn, $query);
-
-    return mysqli_affected_rows($conn);
-}
-
-
-function ubah($data)
-{
-    global $conn;
-
-    $id = $data["id"];
-    $keterangan = $data["keterangan"];
-
-    // query insert data
-    $query = "UPDATE tempat SET
- 				keterangan = '$keterangan'
  			  WHERE id = $id
  			";
     mysqli_query($conn, $query);
